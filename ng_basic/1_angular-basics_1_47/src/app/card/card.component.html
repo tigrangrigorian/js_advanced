@@ -1,0 +1,74 @@
+<div class="card">
+  <h2 [ngStyle]="{
+    color: title.length <= 5 ? 'red' : 'blue',
+    fontWeight: title.length < 7 ? 'normal' : 'bolder'
+  }">{{index}}. {{card.title}}</h2>
+
+  <hr>
+
+<!--  <p class="text" [ngClass]="{-->
+<!--    blue: textColor === 'blue',-->
+<!--    green: textColor === 'green',-->
+<!--    red: textColor === 'red'-->
+<!--  }">String: {{text}}</p>-->
+
+  <p class="text"
+     [class.blue]="textColor === 'blue'"
+     [class.green]="textColor === 'green'"
+     [class.red]="textColor === 'red'"
+  >String: {{card.text}}</p>
+
+  <div class="buttons">
+    <button (click)="textColor = 'blue'">Set Blue</button>
+    <button (click)="textColor = 'green'">Set Green</button>
+    <button (click)="textColor = 'red'">Set Red</button>
+  </div>
+
+  <hr>
+
+  <p>Number: {{number}}</p>
+  <p>Numbers array: {{fibArray}}</p>
+  <pre>Object: {{obj | json}}</pre>
+  <p>Function: {{getInfo()}}</p>
+
+  <hr>
+
+  <div>
+    <img [src]="imgUrl" alt="">
+    <br>
+    <button [disabled]="disabled">Enable</button>
+  </div>
+
+  <hr>
+
+  <div class="buttons">
+    <button (click)="changeTitle()">Change Title</button>
+    <button (click)="card.title = 'Inline Title'">Change title inline</button>
+  </div>
+
+  <hr>
+
+  <div class="my-input">
+    <h3>Binding</h3>
+    <label>
+      <input type="text" (input)="inputHandler(myInput.value)" [value]="title" #myInput>
+    </label>
+  </div>
+
+  <hr>
+
+  <div class="my-input">
+    <h3>Using ngModel</h3>
+    <label>
+      <input type="text" [(ngModel)]="card.title">
+    </label>
+  </div>
+
+  <hr>
+
+  <div>
+    <strong>{{cardDate | date:'dd MMMM yyyy HH:mm:ss':null:'ru'}}</strong>
+  </div>
+
+</div>
+

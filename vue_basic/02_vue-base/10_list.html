@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>list</h1>
+    <ul>
+        <li v-for="(person, index) in people">{{index+1}} - {{person}}</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+        <li v-for="o in arrObj">{{o.id}} - {{o.name}}</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+        <li v-for="n in 3">{{n}}</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+        <li v-for="o in arrObj">{{o.id}} - {{o.name}}</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+        <li v-for="(k, v, i) in person">{{i+1}} - {{v}} : {{k}}</li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            people: [
+                'max', 'boo', 'foo','goo', 'soo'
+            ],
+            arrObj: [
+                {id:1, name: 'joo'},
+                {id:2, name: 'hoo'},
+                {id:3, name: 'eoo'},
+            ],
+            person: {
+                name: 'Tpp',
+                age: 30,
+                job: 'FrontEnd'
+            }
+        }
+    })
+</script>
+</body>
+</html>

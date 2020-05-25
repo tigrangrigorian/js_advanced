@@ -1,0 +1,125 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+:root {
+  --main-color: rgb(92, 170, 255);
+  //--main-color: #00be00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background: url('assets/main/bg3.jpg') no-repeat fixed;
+  background-size: 100% 100%;
+}
+
+.form-group {
+  background: rgba(166, 166, 166, 0.6);
+  //background: white;
+  border-radius: 10px;
+  padding: 40px 20px;
+  min-width: 400px;
+  //min-height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding: 13px 0;
+  }
+}
+
+.input-container {
+  display: flex;
+  //height: 200px;
+  width: 100%;
+  margin: 20px 0;
+  //padding: 20px 0;
+
+}
+
+.icon {
+  padding: 10px;
+  background: var(--main-color);
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.input-field {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  //border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  //border-radius: 5px;
+
+  &.ng-invalid.ng-touched {
+    //border: 2px solid orangered;
+    box-shadow: 0px 0px 7px red inset;
+    //border-top-right-radius: 10px;
+    //border-bottom-right-radius: 10px;
+  }
+
+  &.ng-valid.ng-touched {
+    outline: 2px solid #39ffe6;
+  }
+}
+
+.input-field::before {
+  content: ('&#127891;');
+  font-size: 20px;
+
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.validation {
+  //margin-bottom: 10px;
+  //margin: 10px 0;
+
+  small {
+    font-size: 14px;
+    color: red;
+  }
+}
+
+/* Set a style for the submit button */
+.btn {
+  font-size: 18px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+  //margin-top: 25px;
+
+  &:hover {
+    //background-color: white;
+    //color: dodgerblue;
+    background-color: #1b7767;
+    color: white;
+  }
+}
+
+

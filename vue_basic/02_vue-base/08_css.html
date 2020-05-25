@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            border-radius: 50%;
+            margin: 50px;
+        }
+        .red {background: red;}
+        .green {background: green;}
+        .blue {background: blue;}
+    </style>
+</head>
+<body>
+<div id="app">
+
+    <div
+            class="circle"
+            @click="isActive = !isActive"
+            :class="{'red': isActive, 'green': !isActive}"
+    ></div>
+
+    <div class="circle" :class="color"></div>
+    <input
+            type="text"
+            v-model="color"
+
+    >
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            isActive: false,
+            color: ''
+        },
+        methods: {
+        }
+    })
+</script>
+</body>
+</html>

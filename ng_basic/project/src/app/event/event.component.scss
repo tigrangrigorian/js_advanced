@@ -1,0 +1,53 @@
+//.event {
+//  background: beige;
+//  margin: 20px;
+//  padding: 20px;
+//  text-align: center;
+//
+//  flex: 1 1 200px;
+//
+//  .event-photo {
+//
+//    img {
+//      max-width: 100%;
+//    }
+//  }
+//
+//  .event-name {
+//    border: 1px solid;
+//    padding: 20px 0;
+//  }
+//
+//  .event-type {
+//    border: 1px solid;
+//    padding: 20px 0;
+//  }
+//
+//  .event-date {
+//    border: 1px solid;
+//    padding: 20px 0;
+//  }
+//
+//  .event-desc {
+//    border: 1px solid;
+//    padding: 20px 0;
+//  }
+//}
+
+.item {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.item > .photo       {}
+.item > .photo > img { max-width: 100%; }
+.item > .title       { padding: 20px 0; }
+.item > .descr       {}
+.item > .action      { padding: 20px 0 0; }
+
+.item    {
+}

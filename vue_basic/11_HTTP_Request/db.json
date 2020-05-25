@@ -1,0 +1,49 @@
+{
+  "cars": [
+    {
+      "name": "BMW",
+      "year": 2018,
+      "id": 1
+    },
+    {
+      "name": "Mersedes",
+      "year": 2015,
+      "id": 2
+    },
+    {
+      "name": "Reno",
+      "year": 2008,
+      "id": 3
+    },
+    {
+      "name": "Volvo",
+      "year": 2020,
+      "id": 4
+    },
+    {
+      "name": "Lada",
+      "year": 2018,
+      "id": 5
+    },
+    {
+      "name": "Ford 2",
+      "year": 2016,
+      "id": 6
+    },
+    {
+      "name": "Kia",
+      "year": 2018,
+      "id": 7
+    },
+    {
+      "name": "Niva",
+      "year": 2018,
+      "id": 8
+    },
+    {
+      "name": "Linkoln",
+      "year": 2018,
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Angular Directives</h1>
+
+  <h2>1. Change text color</h2>
+  <p appChangeColor = 'green'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, nisi!</p>
+
+  <hr>
+
+  <h2>2. Toggle box color on click</h2>
+  <div
+    class="box"
+    appChangeColorOnClick = 'green'></div>
+
+  <hr>
+
+  <h2>3. Hover</h2>
+  <p appHover
+     [dStyles]="{border: '1px solid red', fontWeight: 'bold', borderRadius: '12px'}"
+  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, quo!</p>
+
+  <hr>
+
+  <h2>4. Mark text</h2>
+  <p appMarkText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, inventore.</p>
+
+  <hr>
+
+  <h2>5. Adding text</h2>
+  <p appAddText="-----bbbbbbbbbbbbbbb"
+  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, nostrum?</p>
+
+  <hr>
+
+  <h2>6. Text to upper case</h2>
+  <p appToUpperCase = 'low'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, nostrum?</p>
+
+  <hr>
+
+  <h2>7. Border component</h2>
+  <div class="box2" appBorder="dashed"></div>
+
+  <hr>
+</div>

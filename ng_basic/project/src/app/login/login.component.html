@@ -1,0 +1,90 @@
+<!--<form class="form-group" [formGroup]="form" (ngSubmit)="submit()">-->
+<!--  <h1>Login</h1>-->
+
+<!--  <div class="form-control">-->
+<!--    <i class="fas fa-user"></i>-->
+<!--    <input type="email" placeholder="Username" formControlName="email" autocorrect="off">-->
+<!--  </div>-->
+<!--  <div-->
+<!--    *ngIf="form.get('email').touched && form.get('email').invalid"-->
+<!--    class="validation">-->
+<!--    <small-->
+<!--      *ngIf="form.get('email').errors.required"-->
+<!--    >Email is required.-->
+<!--    </small>-->
+<!--    <small-->
+<!--      *ngIf="form.get('email').errors.email"-->
+<!--    >Email is not valid.-->
+<!--    </small>-->
+<!--  </div>-->
+
+<!--  <div class="form-control">-->
+<!--    <i class="fas fa-lock"></i>-->
+<!--    <input type="password" placeholder="Password" formControlName="password">-->
+<!--  </div>-->
+<!--  <div-->
+<!--    *ngIf="form.get('password').touched && form.get('password').invalid"-->
+<!--    class="validation">-->
+<!--    <small *ngIf="form.get('password').errors.required">-->
+<!--      Password is required.-->
+<!--    </small>-->
+<!--    <small *ngIf="form.get('password').errors.minlength">-->
+<!--      Password must be minimum-->
+<!--      {{form.get('password').errors.minlength.requiredLength}}-->
+<!--      symbols.-->
+<!--      <br>-->
+<!--      Now it is-->
+<!--      {{form.get('password').errors.minlength.actualLength}}-->
+<!--      symbols.-->
+<!--    </small>-->
+<!--  </div>-->
+
+<!--  <input type="submit" class="btn" value="Sign in">-->
+<!--</form>-->
+
+<form class="form-group" [formGroup]="form" (ngSubmit)="submit()">
+  <h1>Login</h1>
+
+  <div
+    *ngIf="isValid('email')"
+    class="validation">
+    <small
+      *ngIf="form.invalid"
+    >Email is required.
+    </small>
+<!--    <small-->
+<!--      *ngIf="form.get('email').errors.email"-->
+<!--    >Email is not valid.-->
+<!--    </small>-->
+  </div>
+
+  <div class="input-container">
+<!--    <i class="fa fa-user icon"></i>-->
+    <i class="fa fa-user icon" [class.iconInvalid]="isValid('email')"></i>
+    <input class="input-field" type="email" placeholder="Username" formControlName="email" autofocus>
+  </div>
+
+
+  <div class="input-container">
+    <i class="fa fa-key icon" [class.iconInvalid]="isValid('password')"></i>
+    <input class="input-field" type="password" placeholder="Password" formControlName="password">
+  </div>
+<!--  <div-->
+<!--    *ngIf="isValid('password')"-->
+<!--    class="validation">-->
+<!--    <small *ngIf="form.get('password').errors.required">-->
+<!--      Password is required.-->
+<!--    </small>-->
+<!--    <small *ngIf="form.get('password').errors.minlength">-->
+<!--      Password must be minimum-->
+<!--      {{form.get('password').errors.minlength.requiredLength}}-->
+<!--      symbols.-->
+<!--      <br>-->
+<!--      Now it is-->
+<!--      {{form.get('password').errors.minlength.actualLength}}-->
+<!--      symbols.-->
+<!--    </small>-->
+<!--  </div>-->
+
+  <input type="submit" class="btn" value="Submit">
+</form>

@@ -1,0 +1,31 @@
+//.events-list {
+//  border: 1px solid red;
+//  margin: 20px auto;
+//  max-width: 900px;
+//  min-height: 400px;
+//
+//  display: flex;
+//  justify-content: center;
+//  flex-flow: row wrap;
+//  //align-content: stretch;
+//  //align-items: stretch;
+//}
+
+
+.flexbox {
+  margin: 20px auto;
+
+  background: rgba(166, 166, 166, 0.4);
+  border-radius: 10px;
+
+  max-width: 900px;
+  min-height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-flow: row wrap;
+  align-content: stretch;
+
+}
+

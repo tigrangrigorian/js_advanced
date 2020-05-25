@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2>Counter : {{counter}} / {{counter2}}</h2>
+    <h3>{{result()}}</h3>
+    <h3>{{computedRes}}</h3>
+
+    <button @click="add">Add</button>
+    <button @click="sub">Sub</button>
+    <button @click="counter2++">Add 2</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            counter2: 0,
+            condition: 'Less then 3'
+        },
+        methods: {
+            add() {
+                this.counter++;
+            },
+            sub() {
+                this.counter--;
+            },
+            result() {
+                console.log('Result');
+                return this.condition = this.counter > 3 ? 'More then 3' : 'Less then 3';
+            }
+        },
+        computed: {
+            computedRes() {
+                console.log('Computed');
+                return this.condition = this.counter > 3 ? 'More then 3' : 'Less then 3';
+            }
+        },
+        watch: {
+            counter() {
+                console.log(this.counter);
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
