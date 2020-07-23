@@ -1,0 +1,22 @@
+{
+  "name": "js-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promise.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tigrangrigorian/js_advanced.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tigrangrigorian/js_advanced.git"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
